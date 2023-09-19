@@ -36,6 +36,11 @@ def main():
 
 	resp2 = requests.get(baseURL2 + str(number))
 
+	if resp1.json()["evolves_from_species"] != None:
+		evolves_from = resp1.json()["evolves_from_species"]["name"]
+	else:
+		evolves_from = "Nothing"
+
 	stats = resp2.json()["stats"]
 	hp = int(stats[0]["base_stat"])
 	atk = int(stats[1]["base_stat"])
@@ -101,6 +106,7 @@ def main():
 	print("Pokemon id : ",number)
 	print("Pokemon name : ",name)
 	print("Pokemon Generation : ",generation)
+	print("This pokemon evolves from ",evolves_from)
 	print("Types :",end=" ")
 	for poketype in types:
 		print(poketype,end=" ")

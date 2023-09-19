@@ -7,6 +7,7 @@ Write now it shows the following data about a pokemon :
 	<li>Pokemon's id</li>
 	<li>Pokemon's name</li>
 	<li>Pokemon's generation</li>
+	<li>The pokemon from which it evolved</li>
 	<li>Pokemon's Type</li>
 	<li>Pokemon's Statistics</li>
 	<li>Pokemon's description in english</li>
