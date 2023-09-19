@@ -6,6 +6,7 @@ Write now it shows the following data about a pokemon :
 <ol>
 	<li>Pokemon's id</li>
 	<li>Pokemon's name</li>
+	<li>Whether a pokemon is mythical, baby, legendary or ordinary</li>
 	<li>Pokemon's generation</li>
 	<li>The pokemon from which it evolved</li>
 	<li>Pokemon's Type</li>

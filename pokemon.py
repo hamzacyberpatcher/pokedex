@@ -104,9 +104,19 @@ def main():
 
 	generation = resp1.json()["generation"]["name"]
 
+	if resp1.json()["is_mythical"]:
+		pokerank = "mythical"
+	elif resp1.json()["is_legendary"]:
+		pokerank = "legendary"
+	elif resp1.json()["is_baby"]:
+		pokerank = "baby"
+	else:
+		pokerank = "ordinary"
+
 	print("\n")
 	print("Pokemon id : ",number)
 	print("Pokemon name : ",name)
+	print("Pokemon's Rank : ",pokerank)
 	print("Pokemon Generation : ",generation)
 	print("This pokemon evolves from ",evolves_from)
 	print("Types :",end=" ")
