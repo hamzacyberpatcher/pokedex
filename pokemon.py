@@ -1,5 +1,17 @@
 import requests
 
+def internet_connection():
+    try:
+        response = requests.get("https://www.pokeapi.co", timeout=5)
+        return True
+    except requests.ConnectionError:
+        return False 
+
+if not internet_connection():
+	print("Unable to connect. Check your internet connection.")
+	exit()
+	
+
 pokemon = input("Enter the pokemon's name or id : ")
 
 pokemon = pokemon.lower()
