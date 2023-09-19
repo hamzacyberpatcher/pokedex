@@ -39,7 +39,7 @@ def main():
 	if resp1.json()["evolves_from_species"] != None:
 		evolves_from = resp1.json()["evolves_from_species"]["name"]
 	else:
-		evolves_from = "Nothing"
+		evolves_from = "nothing"
 
 	stats = resp2.json()["stats"]
 	hp = int(stats[0]["base_stat"])
@@ -60,15 +60,17 @@ def main():
 
 
 	flavor_text_entries = resp1.json()["flavor_text_entries"]
-
+	i = 0
 	if len(flavor_text_entries) != 0:
-		for i in range(10):
+		while True:
 			if flavor_text_entries[i]["language"]["name"] == "en":
 				description = flavor_text_entries[i]["flavor_text"]
 				description = description.replace("\n\n"," ")
 				description = description.replace("\n"," ")
 				description = description.replace("\x0c"," ")
 				description = description.replace("  "," ")
+				break
+			i = i + 1
 	else:
 		description = "Not Available"
 
