@@ -1,3 +1,4 @@
+
 # pokedex
 A pokedex made in python that is getting data from pokeapi.co<br>
 It take the pokemon's name or id as the input<br>
@@ -9,6 +10,7 @@ Write now it shows the following data about a pokemon :
 	<li>Whether a pokemon is mythical, baby, legendary or ordinary</li>
 	<li>Pokemon's generation</li>
 	<li>The pokemon from which it evolved</li>
+	<li>The pokemons into which this pokemon can evolve into</li>
 	<li>Pokemon's Type</li>
 	<li>Pokemon's Statistics</li>
 	<li>Pokemon's description in english</li>
