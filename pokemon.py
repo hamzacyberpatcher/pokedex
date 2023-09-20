@@ -120,6 +120,10 @@ def main():
 	evolvesInto = []
 	for evolve_into in evolves_into:
 		evolvesInto.append(evolve_into["name"])
+
+	if len(evolvesInto) == 0:
+		evolvesInto.append("None")
+
 	print("\n")
 	print("Pokemon id : ",number)
 	print("Pokemon name : ",name)
