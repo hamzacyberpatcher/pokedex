@@ -113,12 +113,21 @@ def main():
 	else:
 		pokerank = "ordinary"
 
+	# imported the library here because elsewise it showed stupid debug data
+	from cs50 import SQL
+	db = SQL("sqlite:///evolutions.db")
+	evolves_into = db.execute("SELECT name FROM evolutions WHERE evolves_from = ?",name)
+	evolvesInto = []
+	for evolve_into in evolves_into:
+		evolvesInto.append(evolve_into["name"])
 	print("\n")
 	print("Pokemon id : ",number)
 	print("Pokemon name : ",name)
 	print("Pokemon's Rank : ",pokerank)
 	print("Pokemon Generation : ",generation)
 	print("This pokemon evolves from ",evolves_from)
+	print("This pokemon evolves into : ",end="")
+	print(", ".join(evolvesInto))
 	print("Types :",end=" ")
 	for poketype in types:
 		print(poketype,end=" ")
