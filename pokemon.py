@@ -134,7 +134,7 @@ def main():
 	print("This pokemon evolves from ",evolves_from)
 	print("This pokemon evolves into : ",end="")
 	print(", ".join(evolvesInto))
-	print("Types :",end="")
+	print("Types : ",end="")
 	print(", ".join(types))
 	print("\n")
 	print("Statistics : ")
