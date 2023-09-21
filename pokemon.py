@@ -97,9 +97,9 @@ def main():
 					break
 		else:
 			ability_desc = "Not available"
-		ability["name"].append(ability_resp["ability"]["name"])
-		ability["is_hidden"].append(ability_resp["is_hidden"])
-		ability["desc"].append(ability_desc)
+		ability["name"] = ability_resp["ability"]["name"]
+		ability["is_hidden"] = ability_resp["is_hidden"]
+		ability["desc"] = ability_desc
 		abilities.append(ability)
 
 	generation = resp1.json()["generation"]["name"]
