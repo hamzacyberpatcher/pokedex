@@ -124,6 +124,8 @@ def main():
 	if len(evolvesInto) == 0:
 		evolvesInto.append("None")
 
+	sprite = resp2.json()["sprites"]["other"]["official-artwork"]["front_default"]
+
 	print("\n")
 	print("Pokemon id : ",number)
 	print("Pokemon name : ",name)
@@ -155,6 +157,7 @@ def main():
 		print("Is hidden : ",ability["is_hidden"])
 		print("Description : ",ability["desc"])
 		print("-"*80)
+	print("Pokemon's sprite : ",sprite)
 
 if __name__ == "__main__":
 	main()
