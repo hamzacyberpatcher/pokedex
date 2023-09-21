@@ -16,4 +16,5 @@ Write now it shows the following data about a pokemon :
 	<li>Pokemon's description in english</li>
 	<li>Pokemon's height and weight</li>
 	<li>Pokemon's abilities</li>
+	<li>Pokemon's sprite url</li>
 </ol>
