@@ -42,12 +42,21 @@ def main():
 		evolves_from = "nothing"
 
 	stats = resp2.json()["stats"]
-	hp = int(stats[0]["base_stat"])
-	atk = int(stats[1]["base_stat"])
-	defense = int(stats[2]["base_stat"])
-	spatk = int(stats[3]["base_stat"])
-	spdef = int(stats[4]["base_stat"])
-	speed = int(stats[5]["base_stat"])
+	print(stats)
+	if stats:
+		hp = int(stats[0]["base_stat"])
+		atk = int(stats[1]["base_stat"])
+		defense = int(stats[2]["base_stat"])
+		spatk = int(stats[3]["base_stat"])
+		spdef = int(stats[4]["base_stat"])
+		speed = int(stats[5]["base_stat"])
+	else:
+		hp = 0
+		atk = 0
+		defense = 0
+		spatk = 0
+		spdef = 0
+		speed = 0
 
 	total = hp + atk + defense + spatk + spdef + speed
 
