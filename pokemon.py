@@ -42,7 +42,6 @@ def main():
 		evolves_from = "nothing"
 
 	stats = resp2.json()["stats"]
-	print(stats)
 	if stats:
 		hp = int(stats[0]["base_stat"])
 		atk = int(stats[1]["base_stat"])
